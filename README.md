@@ -15,6 +15,6 @@ powers of the LESS language to make things easy to use.
 
 ## Copyright & License
 
-All code in this repository is released under the terms of the NFAL license.
+All code in this repository is released under the terms of the MIT license.
 
 Copyright (C) 2014 Nikolay Nemshilov

@@ -2,12 +2,12 @@
   "name": "pain.less.css",
   "version": "0.0.0",
   "description": "Love and kisses, Zaphod",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nikolay Nemshilov",
-  "license": "NFAL",
+  "license": "MIT",
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-less": "^0.12.0",

@@ -1,0 +1,57 @@
+.basic-layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  > header, > main, > footer {
+    padding: 1em 2em;
+    display: flex;
+  }
+
+  > header {
+    background: yellow;
+  }
+
+  > main {
+    flex: 1;
+
+    > article {
+      flex: 1;
+    }
+
+    > aside {
+      background: pink;
+      width: 20em;
+    }
+  }
+
+  > footer {
+    background: green;
+  }
+}
+
+.fixed-layout {
+  .basic-layout;
+
+  > header, > main, > footer {
+    justify-content: center;
+
+    > .paddings {
+      display: flex;
+      width: 1000px;
+    }
+  }
+
+  > main {
+    > .paddings {
+      > article {
+        flex: 1;
+      }
+
+      > aside {
+        background: pink;
+        width: 20em;
+      }
+    }
+  }
+}

@@ -1,2 +1,10 @@
 
 @import "./painless";
+
+body:not([class*="basic"]) {
+  .fixed-layout;
+}
+
+body.basic {
+  .basic-layout;
+}

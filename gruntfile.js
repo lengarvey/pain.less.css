@@ -17,11 +17,11 @@ module.exports = function(grunt) {
         spawn: false
       },
       less: {
-        files: ["./src/*"],
+        files: ["./src/**/*.less"],
         tasks: ["less"],
       },
       html: {
-        files: ["./public/*"]
+        files: ["./public/**/*"]
       }
     },
     connect: {

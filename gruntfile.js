@@ -7,7 +7,7 @@ module.exports = function(grunt) {
           paths: ["./src"]
         },
         files: {
-          "./public/application.css": "./src/application.less"
+          "./public/painless-demo.css": "./src/painless-demo.less"
         }
       }
     },

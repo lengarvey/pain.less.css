@@ -11,6 +11,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    lesslint: {
+      src: ['src/painless.less'],
+      options: {
+        less: {
+          paths: ["./src"]
+        },
+        imports: ["src/**/*.less"]
+      }
+    },
     watch: {
       options: {
         livereload: true,
@@ -18,7 +27,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: ["./src/**/*.less"],
-        tasks: ["less"],
+        tasks: ["less", "lesslint"],
       },
       html: {
         files: ["./public/**/*"]
@@ -38,6 +47,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-lesslint');
 
   grunt.registerTask('default', ['connect', 'watch']);
 };

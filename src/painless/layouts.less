@@ -4,7 +4,7 @@
   flex-direction: column;
 
   > header, > main, > footer {
-    padding: 1em 2em;
+    padding: @layout_paddings;
     display: flex;
   }
 
@@ -20,8 +20,7 @@
     }
 
     > aside {
-      background: pink;
-      width: 20em;
+      width: @sidebar_width;
     }
   }
 
@@ -34,11 +33,13 @@
   .basic-layout;
 
   > header, > main, > footer {
+    padding-left:  0px;
+    padding-right: 0px;
     justify-content: center;
 
     > .paddings {
       display: flex;
-      width: 1000px;
+      width: @layout_width;
     }
   }
 
@@ -49,8 +50,7 @@
       }
 
       > aside {
-        background: pink;
-        width: 20em;
+        width: @sidebar_width;
       }
     }
   }

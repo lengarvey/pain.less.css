@@ -20,6 +20,14 @@ module.exports = function(grunt) {
         imports: ["src/**/*.less"]
       }
     },
+    autoprefixer: {
+      options: {
+        browsers: ["last 2 versions"]
+      },
+      stuff: {
+        src: "./public/painless-demo.css"
+      }
+    },
     watch: {
       options: {
         livereload: true,
@@ -27,7 +35,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: ["./src/**/*.less"],
-        tasks: ["less", "lesslint"],
+        tasks: ["less", "lesslint", "autoprefixer"],
       },
       html: {
         files: ["./public/**/*"]
@@ -48,6 +56,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-lesslint');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('default', ['connect', 'watch']);
 };

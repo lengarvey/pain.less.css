@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/painless-demo.css" />
+  </head>
+  <body>
+    <header>
+      <div class="paddings">
+        <a href="/" class="logo">pain.less.css</a>
+
+        <nav>
+          <a href="/layouts.html" class="active">Layouts</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="paddings">
+        <article>
+          <h1>Layouts Basics</h1>
+          <p>
+            To achieve the best results and ensure your page flexibility
+            for the future and good support across different devices, please
+            use the following basic layout structure.
+          </p>
+
+          <pre><code lang="slim">
+body
+  header
+    .paddings
+      | Header content
+  main
+    .paddings
+      article // optional
+        | Main text content
+      aside // optional
+        | Sidebar text
+
+  footer
+    .paddings
+      | Footer content
+          </code></pre>
+
+          <p>
+            Once you have the structure, then you can inject your one the layouts
+            style in the <tt>BODY</tt> tag in your <tt>application.less</tt> file.
+          </p>
+
+          <pre><code lang="less">
+body {
+  .fixed-layout; // if you want a fixed-width layout
+}
+          </code></pre>
+
+          <p>
+            There are couple of layout styles available
+          </p>
+
+          <ul>
+            <li><tt>.fixed-layout</tt> - the fixed width layout</li>
+            <li><tt>.basic-layout</tt> - the basic full page width layout</li>
+          </ul>
+
+          <a id="sidebar"></a>
+          <h2>Sidebars Position</h2>
+
+          <p>
+            Sidebars are done by using the <tt>ASIDE</tt> tag and position of
+            the sidebar depends on where it's placed in the HTML structure.
+          </p>
+
+          <pre><code lang="slim">
+main
+  .paddings
+    article
+    aside Sidebar is on the right
+          </code></pre>
+
+          <p>
+            If you want your sidebar to be on the left side, just move it
+            before the <tt>ARTICLE</tt> section.
+          </p>
+
+          <pre><code lang="slim">
+main
+  .paddings
+    aside Sidebar is on the left
+    article
+          </code></pre>
+
+          <p>
+            Another way, you can change the flex-box order for the <tt>ASIDE</tt>
+            tag
+          </p>
+        </article>
+        <aside>
+          <nav>
+            <a href="#">Beginning</a>
+            <a href="#sidebar">Sidebar</a>
+          </nav>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="paddings">
+        <p>Copyright (C) 2014 Nikolay Nemshilov</p>
+      </div>
+    </footer>
+  </body>
+</html>

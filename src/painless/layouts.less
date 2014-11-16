@@ -9,28 +9,24 @@ html, body {
   flex-direction: column;
 
   > header, > main, > footer {
-    padding: @layout_paddings;
     display: flex;
-  }
 
-  > header {
-    background: yellow;
+    .paddings {
+      padding: @layout_paddings;
+      display: flex;
+    }
   }
 
   > main {
     flex: 1;
 
-    > article {
+    > article, > .paddings > article {
       flex: 1;
     }
 
-    > aside {
+    > aside, > .paddings > aside {
       width: @sidebar_width;
     }
-  }
-
-  > footer {
-    background: green;
   }
 }
 
@@ -38,25 +34,12 @@ html, body {
   .basic-layout;
 
   > header, > main, > footer {
-    padding-left:  0;
-    padding-right: 0;
     justify-content: center;
 
     > .paddings {
-      display: flex;
+      padding-left:  0;
+      padding-right: 0;
       width: @layout_width;
-    }
-  }
-
-  > main {
-    > .paddings {
-      > article {
-        flex: 1;
-      }
-
-      > aside {
-        width: @sidebar_width;
-      }
     }
   }
 }

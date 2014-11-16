@@ -10,6 +10,7 @@
 
         <nav>
           <a href="/layouts.html" class="active">Layouts</a>
+          <a href="/typography.html">Typography</a>
         </nav>
       </div>
     </header>
@@ -23,33 +24,36 @@
             use the following basic layout structure.
           </p>
 
-          <pre><code lang="slim">
-body
-  header
-    .paddings
-      | Header content
-  main
-    .paddings
-      article // optional
-        | Main text content
-      aside // optional
-        | Sidebar text
-
-  footer
-    .paddings
-      | Footer content
-          </code></pre>
+          <pre><code class="html">&lt;body>
+  &lt;header>
+    &lt;div class="paddings">
+      Header content
+    &lt;/div>
+  &lt;main>
+    &lt;div class="paddings">
+      &lt;article>
+        Main text content
+      &lt;/article>
+      &lt;aside>
+        Sidebar text
+      &lt;/aside>
+    &lt;/div>
+  &lt;/main>
+  &lt;footer>
+    &lt;div class="paddings">
+      Footer content
+    &lt;/div>
+  &lt;/footer>
+&lt;/body></code></pre>
 
           <p>
             Once you have the structure, then you can inject your one the layouts
             style in the <tt>BODY</tt> tag in your <tt>application.less</tt> file.
           </p>
 
-          <pre><code lang="less">
-body {
+          <pre><code class="less">body {
   .fixed-layout; // if you want a fixed-width layout
-}
-          </code></pre>
+}</code></pre>
 
           <p>
             There are couple of layout styles available
@@ -68,24 +72,32 @@ body {
             the sidebar depends on where it's placed in the HTML structure.
           </p>
 
-          <pre><code lang="slim">
-main
-  .paddings
-    article
-    aside Sidebar is on the right
-          </code></pre>
+          <pre><code class="html">&lt;main>
+  &lt;div class="paddings">
+    &lt;article>
+      Main text content
+    &lt;/article>
+    &lt;aside>
+      Sidebar is on the right
+    &lt;/aside>
+  &lt;/div>
+&lt;/main></code></pre>
 
           <p>
             If you want your sidebar to be on the left side, just move it
             before the <tt>ARTICLE</tt> section.
           </p>
 
-          <pre><code lang="slim">
-main
-  .paddings
-    aside Sidebar is on the left
-    article
-          </code></pre>
+          <pre><code class="html">&lt;main>
+  &lt;div class="paddings">
+    &lt;aside>
+      Sidebar is on the left
+    &lt;/aside>
+    &lt;article>
+      Main text content
+    &lt;/article>
+  &lt;/div>
+&lt;/main></code></pre>
 
           <p>
             Another way, you can change the flex-box order for the <tt>ASIDE</tt>

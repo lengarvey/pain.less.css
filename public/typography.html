@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/painless-demo.css" />
+  </head>
+  <body>
+    <header>
+      <div class="paddings">
+        <a href="/" class="logo">pain.less.css</a>
+
+        <nav>
+          <a href="/layouts.html">Layouts</a>
+          <a href="/typography.html" class="active">Typography</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="paddings">
+        <article>
+          <h1>Typography</h1>
+          <p>
+            <tt>pain.less.css</tt> we're trying to follow the basic HTML
+            structures and don't add any extra classes wherever we can.
+          </p>
+
+          <a id="headers"></a>
+          <h2>Headers</h2>
+
+          <div class="example">
+            <h1>H1 Title</h1>
+            <h2>H2 Title</h2>
+            <h3>H3 Title</h3>
+            <h4>H4 Title</h4>
+            <h5>H5 Title</h5>
+            <pre><code class="html">&lt;h1&gt;H1 Title&lt;/h1&gt;
+&lt;h2&gt;H2 Title&lt;/h1&gt;
+&lt;h3&gt;H3 Title&lt;/h1&gt;
+&lt;h4&gt;H4 Title&lt;/h1&gt;
+&lt;h5&gt;H5 Title&lt;/h1&gt;</code></pre>
+          </div>
+
+          <a id="blockquotes"></a>
+          <h2>Blockquotes</h2>
+
+          <div class="example">
+            <blockquote>
+              <p>My therapist told me the way to achieve true inner peace is to finish what I start. So far I’ve finished two bags of M&Ms and a chocolate cake. I feel better already.</p>
+              <cite>Dave Barry</cite>
+            </blockquote>
+            <pre><code class="html">&lt;blockquote&gt;
+  &lt;p>The quote text&lt;/p>
+  &lt;cite>Quote source&lt;/cite>
+&lt;/blockquote&gt;</code></pre>
+          </div>
+
+          <a id="code"></a>
+          <h2>Code blocks</h2>
+
+          <p>
+            All the code blocks should be done with the <code>&lt;code&gt;</code>
+            elements. You can either inline them in the text like so.
+          </p>
+
+          <div class="example">
+            <p>CSS is awesome! <code class="css">body { display: none; }</code></p>
+            <pre><code class="html">&lt;p>CSS is awesome! &lt;code class="css">body { display: none; }&lt;/code>&lt;/p></code></pre>
+          </div>
+
+          <p>
+            You also can embed the <tt>CODE</tt> tags into <tt>PRE</tt> to get
+            blocks of code
+          </p>
+
+          <div class="example">
+            <pre><code class="css">@media screen {
+  .yourmama { font-weight: bold; }
+  .yourmama { max-width: none;   }
+}</code></pre>
+          </div>
+        </article>
+        <aside>
+          <nav>
+            <a href="#">Beginning</a>
+            <a href="#headers">Headers</a>
+            <a href="#code">Code blocks</a>
+          </nav>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="paddings">
+        <p>Copyright (C) 2014 Nikolay Nemshilov</p>
+      </div>
+    </footer>
+  </body>
+</html>

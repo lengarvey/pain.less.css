@@ -1,0 +1,58 @@
+/**
+ * All the typography stuff go in here
+ */
+body {
+  font-size:   @font-size;
+  font-family: @font-family;
+  color:       @font-color;
+}
+
+h1, h2, h3, h4, h5, h6, label, dd {
+  font-family: @font-headers;
+}
+
+h1 { font-size: 2em;    }
+h2 { font-size: 1.5em;  }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em;    }
+h5 { font-size: 0.83em; }
+
+blockquote {
+  margin-left:  0;
+  margin-right: 0;
+  padding: 0 1.5em;
+  border:  none;
+  border-left: .5em solid lighten(@font-color, 70%);
+
+  cite {
+    color: lighten(@font-color, 33%);
+
+    &:before {
+      content: "—";
+      margin-right: .25em;
+    }
+  }
+}
+
+tt, code {
+  font-family: @font-monospace;
+}
+
+tt {
+  color: @primary-color;
+}
+
+code {
+  background: lighten(@primary-color, 60%);
+  display: inline-block;
+  padding: 0 .25em;
+}
+
+pre {
+  code {
+    background: lighten(@font-color, 75%);
+    display:    block;
+    margin:     0;
+    padding:    1em 1.25em;
+  }
+}

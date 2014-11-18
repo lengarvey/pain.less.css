@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/painless-demo.css" />
+  </head>
+  <body>
+    <header>
+      <div class="paddings">
+        <a href="/" class="logo">pain.less.css</a>
+
+        <nav>
+          <a href="/layouts.html">Layouts</a>
+          <a href="/typography.html">Typography</a>
+          <a href="/components.html" class="active">Components</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="paddings">
+        <article>
+          <h1>Components</h1>
+
+          <a id="buttons"></a>
+          <h2>Buttons</h2>
+          <p>
+            To make a button, just use the <tt>BUTTON</tt> tag.
+            Add one of the standard classes (<tt>primary</tt>, <tt>success</tt>,
+            <tt>warning</tt>, <tt>danger</tt>, <tt>info</tt>) to alter the button styles.
+          </p>
+
+          <div class="example">
+            <button>Default</button>
+            <button class="primary">Primary</button>
+            <button class="success">Success</button>
+            <button class="warning">Warning</button>
+            <button class="danger">Danger</button>
+            <button class="info">Info</button>
+
+            <pre><code class="html">&lt;button>Default&lt;/button>
+&lt;button class="primary">Primary&lt;/button>
+&lt;button class="success">Success&lt;/button>
+&lt;button class="warning">Warning&lt;/button>
+&lt;button class="danger">Danger&lt;/button>
+&lt;button class="info">Info&lt;/button></code></code>
+          </div>
+
+          <p>
+            You also can use the <tt>.button</tt> class where you
+            want to make a non-button element to look like a button.
+            You also can combine any of the standard style classes
+            in conjunction with the <tt>button</tt> class in order
+            to modify the button styles.
+          </p>
+
+          <div class="example">
+            <a href="#" class="button">Default</a>
+            <a href="#" class="button primary">Default</a>
+            <a href="#" class="button success">Success</a>
+            <a href="#" class="button warning">Warning</a>
+            <a href="#" class="button danger">Danger</a>
+            <a href="#" class="button info">Info</a>
+
+            <pre><code class="html">&lt;a href="#" class="button">Default&lt;/a>
+&lt;a href="#" class="button primary">Default&lt;/a>
+&lt;a href="#" class="button success">Success&lt;/a>
+&lt;a href="#" class="button wraning">Warning&lt;/a>
+&lt;a href="#" class="button danger">Danger&lt;/a>
+&lt;a href="#" class="button ingo">Info&lt;/a></code></pre>
+          </div>
+
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="paddings">
+        <p>Copyright (C) 2014 Nikolay Nemshilov</p>
+      </div>
+    </footer>
+  </body>
+</html>

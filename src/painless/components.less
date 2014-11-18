@@ -1,0 +1,72 @@
+/**
+ * Various components
+ */
+
+.button {
+  display:         inline-block;
+  background:      @color-background;
+  border:          1px solid lighten(@font-color, 60%);
+  border-radius:   @border-radius;
+  color:           @font-color;
+  text-decoration: none;
+  cursor:          pointer;
+  padding:         .5em 1em;
+
+  &:hover {
+    background:      lighten(@font-color, 70%);
+    text-decoration: none;
+  }
+
+  &.primary, &.success, &.warning, &.danger, &.info {
+    color: @color-background;
+  }
+
+  &.primary {
+    background: @color-primary;
+    border-color: @color-primary;
+
+    &:hover {
+      background: darken(@color-primary, @color-shading);
+    }
+  }
+
+  &.success {
+    background: @color-success;
+    border-color: @color-success;
+
+    &:hover {
+      background: darken(@color-success, @color-shading);
+    }
+  }
+
+  &.warning {
+    background: @color-warning;
+    border-color: @color-warning;
+
+    &:hover {
+      background: darken(@color-warning, @color-shading);
+    }
+  }
+
+  &.danger {
+    background: @color-danger;
+    border-color: @color-danger;
+
+    &:hover {
+      background: darken(@color-danger, @color-shading);
+    }
+  }
+
+  &.info {
+    background: @color-info;
+    border-color: @color-info;
+
+    &:hover {
+      background: darken(@color-info, @color-shading);
+    }
+  }
+}
+
+BUTTON, input[type="button"], input[type="submit"] {
+  .button;
+}

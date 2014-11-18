@@ -23,6 +23,7 @@ blockquote {
   padding: 0 1.5em;
   border:  none;
   border-left: .5em solid lighten(@font-color, 70%);
+  border-radius: @border-radius;
 
   cite {
     color: lighten(@font-color, 33%);
@@ -49,10 +50,12 @@ code {
 }
 
 pre {
+  border-radius: @border-radius;
+
   code {
     background: lighten(@font-color, 75%);
     display:    block;
     margin:     0;
-    padding:    1em 1.25em;
+    padding:    .9em 1.25em;
   }
 }

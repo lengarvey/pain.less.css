@@ -62,13 +62,119 @@
             <p>
               <input type="file">
             </p>
+            <p>
+              <input type="checkbox">
+              <input type="checkbox" checked="checked">
+              <input type="checkbox" disabled="disabled">
+              <input type="checkbox" checked="checked" disabled="disabled">
+            </p>
+            <p>
+              <input type="radio" name="test">
+              <input type="radio" name="test" checked="checked">
+              <input type="radio" name="test" disabled="disabled">
+            </p>
+          </div>
+
+
+          <a id="forms"></a>
+          <h2>Forms and Labels</h2>
+          <p>
+            Forms can be done with a generic structure of the
+            <tt>FORM</tt>, <tt>P</tt> and <tt>LABEL</tt>/<tt>INPUT</tt> tags.
+          </p>
+
+          <div class="example">
+            <form>
+              <p>
+                <label>Username</label>
+                <input type="text" placeholder="Nikolay">
+              </p>
+              <p>
+                <label>Comment</label>
+                <textarea placeholder="Your comment"></textarea>
+              </p>
+            </form>
+
+            <pre><code lang="html">&lt;form>
+  &lt;p>
+    &lt;label>Username&lt;/label>
+    &lt;input type="text" placeholder="Nikolay">
+  &lt;/p>
+  &lt;p>
+    &lt;label>Comment&lt;/label>
+    &lt;textarea placeholder="Your comment">&lt;/textarea>
+  &lt;/p>
+&lt;/form></code></pre>
+          </div>
+
+          <p>
+            If you need to use a custom structure for your input fields
+            or use them outside of a form, please use the <tt>.controls</tt>
+            css class on the grouping element.
+          </p>
+
+          <div class="example">
+            <div class="controls">
+              <label>Username</label>
+              <input type="text" value="Nikolay">
+            </div>
+
+            <pre><code lang="html">&lt;div class="controls">
+  &lt;label>Username&lt;/label>
+  &lt;input type="text" value="Nikolay">
+&lt;/div></code></pre>
+          </div>
+
+          <a id="horizontal"></a>
+          <h2>Horizontal Forms</h2>
+          <p>
+            To make your forms horizontal either add the <tt>.horizontal</tt>
+            class to your <tt>FORM</tt> tag or inject the class into the forms
+            with <tt>LESS</tt> as a mix in.
+          </p>
+
+          <div class="example">
+            <form class="horizontal">
+              <p>
+                <label>Username</label>
+                <input type="text" value="nikolay">
+              </p>
+              <p>
+                <label>Password</label>
+                <input type="password" value="secret">
+              </p>
+              <p>
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Remember me
+                </label>
+              </p>
+            </form>
+            <pre><code lang="html">&lt;form class="horizontal">
+  &lt;p>
+    &lt;label>Username&lt;/label>
+    &lt;input type="text" value="nikolay">
+  &lt;/p>
+  &lt;p>
+    &lt;label>Password&lt;/label>
+    &lt;input type="password" value="secret">
+  &lt;/p>
+  &lt;p>
+    &lt;label class="checkbox">
+      &lt;input type="checkbox">
+      Remember me
+    &lt;/label>
+  &lt;/p>
+&lt;/form></code></pre>
           </div>
 
         </article>
 
         <aside>
           <nav>
-            <a href="#inputs">Inputs</a>
+            <a href="#inputs">Input fields</a>
+            <a href="#forms">Forms and Labels</a>
+            <a href="#horizontal">Horizontal Forms</a>
           </nav>
         </aside>
       </div>

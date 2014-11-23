@@ -11,7 +11,7 @@
   border-radius:   @border-radius;
   color:           @font-color;
   padding:         .5em .75em;
-  min-width:       32em;
+  min-width:       @input-min-width;
   outline-color:   lighten(@color-primary, 20%);
   outline-width:   2px;
 }
@@ -20,6 +20,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
+input[type="url"],
 textarea,
 select {
   .input-field;
@@ -95,10 +96,6 @@ input[type="checkbox"], input[type="radio"] {
     font-weight: bold;
   }
 
-  &:checked {
-    border-color: lighten(@font-color, 50%)
-  }
-
   &:disabled {
     background: darken(@color-background, 10%);
     color: lighten(@font-color, 30%);
@@ -129,12 +126,10 @@ input[type="radio"] {
     display: block;
     margin-bottom: .25em;
 
-    &.checkbox {
-      input[type="checkbox"] {
-        vertical-align: middle;
-        margin-top: -3px;
-        margin-right: .25em;
-      }
+    input[type="checkbox"], input[type="checkbox"] {
+      vertical-align: middle;
+      margin-top: -3px;
+      margin-right: .25em;
     }
   }
 
@@ -142,11 +137,57 @@ input[type="radio"] {
   input[type="password"],
   input[type="email"],
   input[type="number"],
+  input[type="url"],
   textarea,
   select {
     width: 100%;
     min-width: 0;
     flex: 1;
+  }
+
+  &.required {
+    label {
+      &:after {
+        content: '*';
+        color: @color-danger;
+        margin-left: .25em;
+      }
+    }
+  }
+
+  &.primary {
+    input, textarea, select {
+      border-color: @color-primary;
+      color: @color-primary;
+    }
+  }
+
+  &.success {
+    input, textarea, select {
+      border-color: @color-success;
+      color: @color-success;
+    }
+  }
+
+  &.warning {
+    input, textarea, select {
+      border-color: @color-warning;
+      color: @color-warning;
+    }
+  }
+
+  &.danger {
+    input, textarea, select {
+      border-color: @color-danger;
+      color: @color-danger;
+    }
+  }
+
+  &.info {
+    input, textarea, select {
+      border-color: @color-info;
+      color: @color-info;
+    }
   }
 }
 
@@ -160,13 +201,17 @@ form {
       display: flex;
 
       label {
-        width: 10em;
+        width: @form-label-width;
         padding-top: .5em;
 
         &.checkbox {
-          margin-left: 10em;
+          margin-left: @form-label-width;
           width: auto;
         }
+      }
+
+      &.buttons {
+        margin-left: @form-label-width;
       }
     }
   }

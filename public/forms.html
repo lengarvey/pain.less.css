@@ -168,6 +168,54 @@
 &lt;/form></code></pre>
           </div>
 
+          <a id="required"></a>
+          <h2>Required and Modified Fields</h2>
+
+          <p>
+            To make a block with an input field as required or failed/successed
+            please use the <tt>.required</tt> or <tt>.success</tt>, <tt>.danger</tt>
+            classes on an input-block section, for example.
+          </p>
+
+          <div class="example">
+            <form>
+              <p class="required success">
+                <label>Username</label>
+                <input type="text" value="nikolay">
+              </p>
+
+              <p class="required danger">
+                <label>Password</label>
+                <input type="password" value="secret">
+              </p>
+
+              <p class="required info">
+                <label>
+                  <input type="checkbox" />
+                  Remember me
+                </label>
+              </p>
+            </form>
+            <pre><code class="html">&lt;form>
+  &lt;p class="required success">
+    &lt;label>Username&lt;/label>
+    &lt;input type="text" value="nikolay">
+  &lt;/p>
+
+  &lt;p class="required danger">
+    &lt;label>Password&lt;/label>
+    &lt;input type="password" value="secret">
+  &lt;/p>
+
+  &lt;p class="required info">
+    &lt;label>
+      &lt;input type="checkbox" />
+      Remember me
+    &lt;/label>
+  &lt;/p>
+&lt;/form></code></pre>
+          </div>
+
         </article>
 
         <aside>
@@ -175,6 +223,7 @@
             <a href="#inputs">Input fields</a>
             <a href="#forms">Forms and Labels</a>
             <a href="#horizontal">Horizontal Forms</a>
+            <a href="#required">Required Fields</a>
           </nav>
         </aside>
       </div>

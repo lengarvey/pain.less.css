@@ -69,10 +69,55 @@
 &lt;a href="#" class="button ingo">Info&lt;/a></code></pre>
           </div>
 
+          <a id="input-buttons"></a>
+          <h2>Input Buttons</h2>
+
+          <p>
+            <code>&lt;input type="button"></code> and
+            <code>&lt;input type="submit"></code> elements
+            also should work, but generally should be avoided
+            as they're not really semantic, don't support icons
+            and hard to style.
+          </p>
+
+          <div class="example">
+            <input type="button" value="Default">
+            <input type="button" class="primary" value="Primary">
+            <input type="button" class="success" value="Success">
+            <input type="submit" class="warning" value="Warning">
+            <input type="submit" class="danger"  value="Danger">
+            <input type="submit" class="info"    value="Info">
+          </div>
+
+          <a id="groups"></a>
+          <h2>Element Groups</h2>
+          <p>
+            Whenever you need to create a group of elements, such as
+            pills, and such, please use the <tt>.group</tt> class on
+            the groupping element.
+          </p>
+
+          <div class="example">
+            <div class="group">
+              <button>One</button>
+              <button class="primary">Two</button>
+              <button>Three</button>
+              <button>Four</button>
+            </div>
+
+            <pre><code lang="html">&lt;div class="group">
+  &lt;button>One&lt;/button>
+  &lt;button class="primary">Two&lt;/button>
+  &lt;button>Three&lt;/button>
+  &lt;button>Four&lt;/button>
+&lt;/div></code></pre>
+          </div>
+
         </article>
         <aside>
           <nav>
             <a href="#buttons">Buttons</a>
+            <a href="groups">Element Groups</a>
           </nav>
         </aside>
       </div>

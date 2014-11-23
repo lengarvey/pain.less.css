@@ -168,6 +168,100 @@
 &lt;/form></code></pre>
           </div>
 
+          <a id="inline"></a>
+          <h2>Inline Forms</h2>
+
+          <p>
+            To make and inline form, please keep the same
+            form structure as before and just add the <tt>.inline</tt>
+            class to the <tt>FORM</tt> element.
+          </p>
+
+          <div class="example">
+            <form class="inline">
+              <p>
+                <input type="text" placeholder="Username">
+              </p>
+              <p>
+                <input type="password" placeholder="Password">
+              </p>
+              <p class="buttons">
+                <button type="submit">Log In</button>
+              </p>
+            </form>
+
+            <pre><code lang="html">&lt;form class="inline">
+  &lt;p>
+    &lt;input type="text" placeholder="Username">
+  &lt;/p>
+  &lt;p>
+    &lt;input type="password" placeholder="Password">
+  &lt;/p>
+  &lt;p class="buttons">
+    &lt;button type="submit">Log In&lt;/button>
+  &lt;/p>
+&lt;/form></code></pre>
+          </div>
+
+          <p>
+            You also can use the <tt>.inline</tt> class in conjunction
+            with the standard <tt>.group</tt> class to create forms where
+            the submit buttons look like addons.
+          </p>
+
+          <div class="example">
+            <form class="inline group">
+              <p>
+                <input type="search" placeholder="Search">
+              </p>
+              <p class="buttons">
+                <input type="submit" value="Go">
+              </p>
+            </form>
+
+            <pre><code lang="html">&lt;form class="inline group">
+  &lt;p>
+    &lt;input type="search" placeholder="Search">
+  &lt;/p>
+  &lt;p class="buttons">
+    &lt;input type="submit" value="Go">
+  &lt;/p>
+&lt;/form></code></pre>
+          </div>
+
+          <p>
+            You can have button sections on the both sides of the
+            form if you need to. Just remember to mark them with the
+            <tt>.buttons</tt> css class.
+          </p>
+
+          <div class="example">
+            <form class="inline group">
+              <p class="buttons">
+                <input type="reset" class="primary" value="Rest">
+              </p>
+              <p>
+                <input type="search" placeholder="Search">
+              </p>
+              <p class="buttons">
+                <input type="submit" value="Go">
+              </p>
+            </form>
+
+            <pre><code lang="html">&lt;form class="inline group">
+  &lt;p class="buttons">
+    &lt;input type="reset" class="primary" value="Rest">
+  &lt;/p>
+  &lt;p>
+    &lt;input type="search" placeholder="Search">
+  &lt;/p>
+  &lt;p class="buttons">
+    &lt;input type="submit" value="Go">
+  &lt;/p>
+&lt;/form></code></pre>
+          </div>
+
+
           <a id="required"></a>
           <h2>Required and Modified Fields</h2>
 
@@ -196,7 +290,7 @@
                 </label>
               </p>
             </form>
-            <pre><code class="html">&lt;form>
+            <pre><code lang="html">&lt;form>
   &lt;p class="required success">
     &lt;label>Username&lt;/label>
     &lt;input type="text" value="nikolay">

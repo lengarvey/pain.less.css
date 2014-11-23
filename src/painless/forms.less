@@ -2,7 +2,6 @@
  * The forms related stuff goes in here
  */
 
-
 .input-field {
   display:         inline-block;
   box-sizing:      border-box;
@@ -18,6 +17,7 @@
 
 input[type="text"],
 input[type="password"],
+input[type="search"],
 input[type="email"],
 input[type="number"],
 input[type="url"],
@@ -45,7 +45,10 @@ select {
     -ms-appearance: none;
     appearance: none;
 
+    padding-top: .3em;
+    padding-bottom: .3em;
     padding-right: 2em;
+
 
     background-image: @image-caret-down;
     background-repeat: no-repeat;
@@ -135,6 +138,7 @@ input[type="radio"] {
 
   input[type="text"],
   input[type="password"],
+  input[type="search"],
   input[type="email"],
   input[type="number"],
   input[type="url"],
@@ -212,6 +216,58 @@ form {
 
       &.buttons {
         margin-left: @form-label-width;
+      }
+    }
+  }
+
+  &.inline {
+    white-space: nowrap;
+
+    > p, .controls {
+      display: inline-block;
+      vertical-align: middle;
+
+      > label, input, textarea, select {
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 0;
+        width: auto;
+      }
+    }
+
+    &.group {
+
+      > p, .controls {
+
+        > input:not([type="checkbox"]), > textarea, > select, > button {
+          border-radius: 0;
+          border-right-width: 0;
+        }
+
+        &:not(.buttons) {
+          flex: 1;
+
+          > input:not([type="checkbox"]), > textarea, > select {
+            width: 100%;
+          }
+        }
+
+        &:first-of-type {
+          > input:not([type="checkbox"]), > textarea, > select, > button {
+            &:first-of-type {
+              border-radius: @border-radius 0 0 @border-radius;
+            }
+          }
+        }
+
+        &:last-of-type {
+          > input:not([type="checkbox"]), > textarea, > select, > button {
+            &:last-of-type {
+              border-radius: 0 @border-radius @border-radius 0;
+              border-right-width: 1px;
+            }
+          }
+        }
       }
     }
   }

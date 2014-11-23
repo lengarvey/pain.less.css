@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/demo.css" />
+</head>
+<body>
+  <header>
+    <div class="paddings">
+      <a href="/" class="logo">pain.less.css</a>
+
+      <nav>
+        <a href="/layouts.html">Layouts</a>
+        <a href="/typography.html">Typography</a>
+        <a href="/components.html">Components</a>
+        <a href="/forms.html">Forms</a>
+        <a href="/utility.html" class="active">Utility</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="paddings">
+      <article>
+        <h1>Utility Items</h1>
+        <p>
+          As we're using the <tt>LESS</tt> preprocessor to drive
+          the implementation, there is a number of utility
+          classes/mixins that are available and can be reused
+          in your application code.
+        </p>
+        <p>
+          <strong>NOTE:</strong> all the classes in this list
+          can be used as stand alone css class on any element
+          or as a mixin, for example.
+        </p>
+
+        <pre><code lang="html">&lt;div class="my-thing uppercase">Text&lt;/div></code></pre>
+
+        <pre><code lang="less">.my-thing {
+  .uppercase;
+  // rest of the styles
+}</code></pre>
+
+        <a id="style-modifiers"></a>
+        <h2>Style Modifieres</h2>
+        <p>
+          By default <tt>pain.less.css</tt> provides several standard
+          style modifiers that can be assigned to any element and used
+          in conjunction with various components.
+        </p>
+
+        <ul>
+          <li><tt>primary</tt> - the primary call for action</li>
+          <li><tt>success</tt> - paints it green</li>
+          <li><tt>warning</tt> - warning element (normally yellow)</li>
+          <li><tt>danger</tt> - danger element (normally red)</li>
+          <li><tt>info</tt> - information elements</li>
+        </ul>
+
+        <div class="example">
+          <p class="primary">A primary block</p>
+          <p class="success">A success block</p>
+          <p class="warning">A warning block</p>
+          <p class="danger">A danger block</p>
+          <p class="info">A info block</p>
+        </div>
+
+        <pre><code lang="html">&lt;p class="primary">A primary block&lt;/p>
+&lt;p class="success">A success block&lt;/p>
+&lt;p class="warning">A warning block&lt;/p>
+&lt;p class="danger">A danger block&lt;/p>
+&lt;p class="info">A info block&lt;/p></code></pre>
+
+        <a id="case-switch"></a>
+        <h2>Text Case Switch</h2>
+        <p>
+          You can use the <tt>uppercase</tt>, <tt>lowercase</tt>
+          and <tt>capitalize</tt> class to change the elements
+          text casing.
+        </p>
+
+        <div class="example">
+          <p class="uppercase">upperCASE</p>
+          <p class="lowercase">LOWERcase</p>
+          <p class="capitalize">capITalize</p>
+        </div>
+
+        <pre><code lang="html">&lt;p class="uppercase">upperCASE&lt;/p>
+&lt;p class="lowercase">LOWERcase&lt;/p>
+&lt;p class="capitalize">capITalize&lt;/p></code></pre>
+
+      </article>
+      <aside>
+        <nav>
+          <a href="#">Beginning</a>
+          <a href="#style-modifiers">Style Modifiers</a>
+          <a href="#case-switch">Text Case Switch</a>
+        </nav>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <div class="paddings">
+      <p>Copyright (C) 2014 Nikolay Nemshilov</p>
+    </div>
+  </footer>
+</body>
+</html>

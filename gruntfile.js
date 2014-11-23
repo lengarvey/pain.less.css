@@ -4,10 +4,10 @@ module.exports = function(grunt) {
     less: {
       development: {
         options: {
-          paths: ["./src"]
+          paths: ["./", "./src"]
         },
         files: {
-          "./public/painless-demo.css": "./src/painless-demo.less"
+          "./demo.css": "./demo.less"
         }
       }
     },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         browsers: ["last 2 versions"]
       },
       stuff: {
-        src: "./public/painless-demo.css"
+        src: "./demo.css"
       }
     },
     watch: {
@@ -34,17 +34,17 @@ module.exports = function(grunt) {
         spawn: false
       },
       less: {
-        files: ["./src/**/*.less"],
+        files: ["./src/**/*.less", "./demo.less"],
         tasks: ["less", "lesslint", "autoprefixer"],
       },
       html: {
-        files: ["./public/**/*"]
+        files: ["./*.html"]
       }
     },
     connect: {
       server: {
         options: {
-          base: "./public",
+          base: "./",
           // keepalive: true,
           livereload: true
         }

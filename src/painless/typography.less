@@ -4,6 +4,7 @@
 body {
   font-size:   @font-size;
   font-family: @font-family;
+  line-height: @line-height;
   color:       @font-color;
 }
 
@@ -17,6 +18,16 @@ h2 { font-size: 1.5em;  }
 h3 { font-size: 1.17em; }
 h4 { font-size: 1em;    }
 h5 { font-size: 0.83em; }
+
+a {
+  color: @color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: darken(@color-primary, 10%);
+  }
+}
 
 blockquote {
   margin-left:  0;
@@ -73,25 +84,9 @@ blockquote {
 
 tt, code {
   font-family: @font-monospace;
+  font-size:   85%;
 }
 
 tt {
-  color: @primary-color;
-}
-
-code {
-  background: lighten(@primary-color, 60%);
-  display: inline-block;
-  padding: 0 .25em;
-}
-
-pre {
-  border-radius: @border-radius;
-
-  code {
-    background: lighten(@font-color, 95%);
-    display:    block;
-    margin:     0;
-    padding:    .9em 1.25em;
-  }
+  color: @color-info;
 }

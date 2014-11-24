@@ -81,22 +81,28 @@ button[type="submit"], input[type="submit"] {
 }
 
 .group {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: nowrap;
 
   > * {
     border-radius: 0;
 
-    &:first-of-type {
+    &:first-child {
       border-radius: @border-radius 0 0 @border-radius;
     }
 
-    &:last-of-type {
+    &:last-child {
       border-radius: 0 @border-radius @border-radius 0;
     }
 
-    &:not(:last-of-type) {
-      border-right-width: 0;
+    &:not(:last-child) {
+      border-right-width: 0 !important;
     }
+  }
+
+  > input, > textarea, > select {
+    flex: 1;
+    min-width: 0 !important;
   }
 }
 

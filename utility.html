@@ -70,6 +70,50 @@
 &lt;p class="danger">A danger block&lt;/p>
 &lt;p class="info">A info block&lt;/p></code></pre>
 
+        <a id="size-modifiers"></a>
+        <h2>Size Modifiers</h2>
+        <p>
+          Everything in <tt>pain.less.css</tt> is defined via the
+          <tt>em</tt> values, so you can scale any elements or components
+          up and down via the <tt>font-size</tt> property and they will keep
+          their proportions.
+        </p>
+
+        <p>
+          But, in case you want to keep consistent with your size changes,
+          there are few special size modifiers.
+        </p>
+
+        <ul>
+          <li><tt>.tiny</tt> - downsizes an element by 33%</li>
+          <li><tt>.small</tt> - downsizes an element by 20%</li>
+          <li><tt>.large</tt> - upsizes an element by 40%</li>
+          <li><tt>.jumbo</tt> - upsizes an elment by 100%</li>
+        </ul>
+
+        <div class="example">
+          <p class="group tiny">
+            <input type="search" placeholder="Tiny">
+            <button class="primary">Go</button>
+          </p>
+          <p class="group small">
+            <input type="search" placeholder="Small">
+            <button class="primary">Go</button>
+          </p>
+          <p class="group">
+            <input type="search" placeholder="Normal">
+            <button class="primary">Go</button>
+          </p>
+          <p class="group large">
+            <input type="search" placeholder="Large">
+            <button class="primary">Go</button>
+          </p>
+          <p class="group jumbo">
+            <input type="search" placeholder="Jumbo">
+            <button class="primary">Go</button>
+          </p>
+        </div>
+
         <a id="case-switch"></a>
         <h2>Text Case Switch</h2>
         <p>

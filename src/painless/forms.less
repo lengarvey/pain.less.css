@@ -241,17 +241,17 @@ form {
           }
         }
 
-        &:first-of-type {
+        &:first-child {
           > input:not([type="checkbox"]), > textarea, > select, > button {
-            &:first-of-type {
+            &:first-child {
               border-radius: @border-radius 0 0 @border-radius;
             }
           }
         }
 
-        &:last-of-type {
+        &:last-child {
           > input:not([type="checkbox"]), > textarea, > select, > button {
-            &:last-of-type {
+            &:last-child {
               border-radius: 0 @border-radius @border-radius 0;
               border-right-width: 1px;
             }

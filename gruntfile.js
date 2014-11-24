@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       },
       less: {
         files: ["./src/**/*.less", "./demo.less"],
-        tasks: ["less", "lesslint", "autoprefixer"],
+        tasks: ["less", "autoprefixer"],
       },
       html: {
         files: ["./*.html"]

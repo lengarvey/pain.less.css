@@ -120,6 +120,101 @@
   }
 &lt;/code>&lt;/pre></code></pre>
 
+          <a id="tables"></a>
+          <h2>Tables</h2>
+          <p>
+            In <tt>pain.less.css</tt> tables are just tables and we
+            rely on the standard HTML markup.
+          </p>
+
+          <div class="example">
+            <table>
+              <tr>
+                <th>#</th><th>One</th><th>Two</th><th>Three</th><th>Four</th>
+              </tr>
+              <tr>
+                <td>1</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>2</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>3</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>4</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+            </table>
+          </div>
+
+          <pre><code lang="html">&lt;table>
+  &lt;tr>
+    &lt;th>One&lt;/th>&lt;th>Two&lt;/th>&lt;th>Three&lt;/th>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>One&lt;/td>&lt;td>Two&lt;/td>&lt;td>Three&lt;/td>
+  &lt;/tr>
+  ...
+&lt;/table></code></pre>
+
+          <p>
+            Similar to bootstrap you can make your tables borderd
+            and stiped by adding the <tt>.bordered</tt> and <tt>.striped</tt>
+            class on them (or alternatively injecting the classes into the
+            <tt>TABLE</tt> tag directly at your application level).
+          </p>
+
+          <div class="example">
+            <table class="bordered">
+              <tr>
+                <th>#</th><th>One</th><th>Two</th><th>Three</th><th>Four</th>
+              </tr>
+              <tr>
+                <td>1</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>2</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>3</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>4</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+            </table>
+          </div>
+
+          <pre><code lang="html">&lt;table class="bordered">
+  ... the usual markup
+&lt;/table></code></pre>
+
+          <p></p>
+
+          <div class="example">
+            <table class="striped">
+              <tr>
+                <th>#</th><th>One</th><th>Two</th><th>Three</th><th>Four</th>
+              </tr>
+              <tr>
+                <td>1</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>2</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>3</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+              <tr>
+                <td>4</td><td>One</td><td>Two</td><td>Three</td><td>Four</td>
+              </tr>
+            </table>
+          </div>
+
+          <pre><code lang="html">&lt;table class="striped">
+  ... the usual markup
+&lt;/table></code></pre>
+
+
         </article>
         <aside>
           <nav>
@@ -127,6 +222,7 @@
             <a href="#headers">Headers</a>
             <a href="#blockquotes">Block quotes</a>
             <a href="#code">Code blocks</a>
+            <a href="#tables">Tables</a>
           </nav>
         </aside>
       </div>

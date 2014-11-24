@@ -1,0 +1,44 @@
+/**
+ * Contains the tables styles
+ */
+
+table {
+  box-size: border-box;
+  border-collapse: collapse;
+  width: 100%;
+
+  td, th {
+    text-align: left;
+    padding: .25em .5em;
+    border: 0px solid @border-color;
+  }
+
+  th {
+    border-bottom-width: 2px;
+  }
+
+  td {
+    border-top-width: 1px;
+  }
+
+  &.bordered {
+    th, td {
+      border-width: 1px;
+    }
+    th {
+      border-bottom-width: 2px;
+    }
+  }
+
+  &.striped {
+    tr {
+      &:nth-child(2n) {
+        background-color: darken(@color-background, 5%);
+      }
+
+      td {
+        border-width: 0;
+      }
+    }
+  }
+}

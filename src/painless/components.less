@@ -6,7 +6,7 @@
   display:         inline-block;
   box-sizing:      border-box;
   background:      @color-background;
-  border:          1px solid lighten(@font-color, 80%);
+  border:          @border-width solid @border-color;
   border-radius:   @border-radius;
   color:           @font-color;
   text-decoration: none;
@@ -132,7 +132,7 @@ pre {
         color: @color-info;
         right: 0;
         top: 0;
-        border: 1px solid lighten(@color-info, 20%);
+        border: @border-width solid inherit;
         border-right: none;
         border-top: none;
         border-radius: 0 @border-radius 0 @border-radius;

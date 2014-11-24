@@ -17,16 +17,38 @@ html, body {
     }
   }
 
+  > header {
+    background-color: @color-header;
+  }
+
   > main {
     flex: 1;
 
     > article, > .paddings > article {
       flex: 1;
+
+      > h1:first-child {
+        margin-top: 0;
+      }
     }
 
     > aside, > .paddings > aside {
       width: @sidebar-width;
       margin-left: 1.6em;
+    }
+  }
+
+  > footer {
+    background-color: @color-footer;
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

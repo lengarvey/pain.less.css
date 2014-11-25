@@ -184,9 +184,13 @@ input[type="radio"] {
   }
 }
 
-form {
+form, fieldset {
   > p {
     .controls;
+
+    &.buttons {
+      margin-top: 1.5em;
+    }
   }
 
   &.horizontal {
@@ -215,6 +219,8 @@ form {
     > p, .controls {
       display: inline-block;
       vertical-align: middle;
+      margin:  0;
+      padding: 0;
 
       > label, input, textarea, select {
         display: inline-block;
@@ -258,6 +264,27 @@ form {
           }
         }
       }
+    }
+  }
+}
+
+fieldset {
+  border: @border-width solid @border-color;
+  border-radius: @border-radius;
+  padding: 1em;
+  padding-top: .5em;
+
+  legend {
+    padding: 0 .5em;
+  }
+
+  > p, .controls {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 }

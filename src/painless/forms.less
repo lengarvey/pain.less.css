@@ -9,7 +9,7 @@
   border:          @border-width solid @border-color;
   border-radius:   @border-radius;
   color:           @font-color;
-  padding:         .5em .75em;
+  padding:         @input-paddings;
   min-width:       @input-min-width;
   outline-color:   lighten(@color-primary, 20%);
   outline-width:   2px;
@@ -42,10 +42,9 @@ select {
   &:not([multiple]) {
     .apperance-none;
 
-    padding-top: .3em;
+    padding-top:    .3em;
     padding-bottom: .3em;
-    padding-right: 2em;
-
+    padding-right:   2em;
 
     background-image: @image-caret-down;
     background-repeat: no-repeat;
@@ -91,6 +90,7 @@ input[type="checkbox"], input[type="radio"] {
     height:      100%;
     font-size:   75%;
     font-weight: bold;
+    line-height: 1.2em;
   }
 
   &:disabled {

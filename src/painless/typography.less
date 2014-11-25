@@ -41,6 +41,10 @@ blockquote {
   border-left: .5em solid @border-color;
   border-radius: @border-radius;
 
+  *:not(h1), *:not(h2), *:not(h3), *:not(h4), *:not(h5) {
+    color: @font-color;
+  }
+
   cite {
     color: lighten(@font-color, 33%);
 

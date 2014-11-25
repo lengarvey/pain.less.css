@@ -214,6 +214,117 @@
   ... the usual markup
 &lt;/table></code></pre>
 
+          <a id="lists"></a>
+          <h2>Lists</h2>
+          <p>
+            Lists (<tt>UL</tt>, <tt>OL</tt>, <tt>DL</tt>) are simply lists,
+            just like our lord and savior Tim Berners-Lee invisioned them.
+          </p>
+
+          <div class="example">
+            <p>
+              Some text before the list, a genuine bla bla bla-ish stuff.
+              I feel like I'm totally making sense here.
+            </p>
+
+            <ul>
+              <li>Take a shower</li>
+              <li>Brush teeth</li>
+              <li>Shave the yack</li>
+              <li>Put the goof on</li>
+            </ul>
+          </div>
+
+          <pre><code lang="html">&lt;ul>
+  &lt;li>Take a shower&lt;/li>
+  &lt;li>Brush teeth&lt;/li>
+  &lt;li>Shave the yack&lt;/li>
+  &lt;li>Put the goof on&lt;/li>
+&lt;/ul></code></pre>
+
+          <p>
+            You can make your lists horizontal, by adding the
+            <tt>.horizontal</tt> css class on them
+          </p>
+
+          <div class="example">
+            <p>
+              Some text before the list, a genuine bla bla bla-ish stuff.
+              I feel like I'm totally making sense here.
+            </p>
+
+            <ol class="horizontal">
+              <li>Take a shower,</li>
+              <li>Brush teeth,</li>
+              <li>Shave the yack,</li>
+              <li>Put the goof on</li>
+            </ol>
+          </div>
+
+          <pre><code lang="html">&lt;ol class="horizontal">
+  &lt;li>Take a shower&lt;/li>
+  &lt;li>Brush teeth&lt;/li>
+  &lt;li>Shave the yack&lt;/li>
+  &lt;li>Put the goof on&lt;/li>
+&lt;/ol></code></pre>
+
+          <br>
+
+          <div class="example">
+            <dl>
+              <dt>Name</dt>
+              <dd>Nikolay</dd>
+
+              <dt>Level</dt>
+              <dd>Like totally awesome</dd>
+
+              <dt>Skillz</dt>
+              <dd>Computerz, Guitarz, Hugz</dd>
+            </dl>
+          </div>
+
+          <pre><code lang="html">&lt;dl>
+  &lt;dt>Name&lt;/dt>
+  &lt;dd>Nikolay&lt;/dd>
+
+  &lt;dt>Level&lt;/dt>
+  &lt;dd>Like totally awesome&lt;/dd>
+
+  &lt;dt>Skillz&lt;/dt>
+  &lt;dd>Computerz, Guitarz, Hugz&lt;/dd>
+&lt;/dl></code></pre>
+
+          <p>
+            You also can make the descriptions list horizontal as well,
+            by using the same <tt>.horizontal</tt> class on them. The width
+            of the description titles in this case defined via the same
+            variable as labels in forms <code>@form-label-width</code>
+          </p>
+
+          <div class="example">
+            <dl class="horizontal">
+              <dt>Name</dt>
+              <dd>Nikolay</dd>
+
+              <dt>Level</dt>
+              <dd>Like totally awesome</dd>
+
+              <dt>Skillz</dt>
+              <dd>Computerz, Guitarz, Hugz</dd>
+            </dl>
+          </div>
+
+          <pre><code lang="html">&lt;dl class="horizontal">
+  &lt;dt>Name&lt;/dt>
+  &lt;dd>Nikolay&lt;/dd>
+
+  &lt;dt>Level&lt;/dt>
+  &lt;dd>Like totally awesome&lt;/dd>
+
+  &lt;dt>Skillz&lt;/dt>
+  &lt;dd>Computerz, Guitarz, Hugz&lt;/dd>
+&lt;/dl></code></pre>
+
 
         </article>
         <aside>
@@ -223,6 +334,7 @@
             <a href="#blockquotes">Block quotes</a>
             <a href="#code">Code blocks</a>
             <a href="#tables">Tables</a>
+            <a href="#lists">Lists</a>
           </nav>
         </aside>
       </div>

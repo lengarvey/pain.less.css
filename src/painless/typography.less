@@ -13,7 +13,7 @@ body {
   font-weight: @font-headers-weight;
 }
 
-h1, h2, h3, h4, h5, h6, label, dd {
+h1, h2, h3, h4, h5, h6, label, dt {
   .header;
 }
 
@@ -101,4 +101,33 @@ tt {
 
 body > footer {
   color: lighten(@font-color, 40%);
+}
+
+ul, ol {
+  &.unstyled {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+  }
+
+  &.horizontal {
+    .unstyled;
+
+    > li {
+      display: inline-block;
+    }
+  }
+}
+
+dl {
+  dd {
+    margin-left: 0;
+  }
+
+  &.horizontal {
+    dt {
+      float: left;
+      width: @form-label-width;
+    }
+  }
 }

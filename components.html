@@ -131,12 +131,78 @@
   &lt;button class="primary">Go&lt;/button>
 &lt;/div></code></pre>
 
+          <a id="navigation"></a>
+          <h2>Navigation</h2>
+          <p>
+            Navigation in the case of <tt>pain.less.css</tt>
+            should be a combination of the <tt>NAV</tt> and
+            the <tt>A</tt> elements. Like so.
+          </p>
+
+          <pre><code lang="html">&lt;nav>
+  &lt;a href="one">One&lt;/a>
+  &lt;a href="two">Two&lt;/a>
+  &lt;a href="three">Three&lt;/a>
+&lt;/nav></code></pre>
+
+          <p>
+            The actual look of the nav element is contextual.
+            For example if you put the <tt>NAV</tt> element
+            within the <tt>BODY > HEADER</tt> element (or add
+            the <tt>.bar</tt> class to it), it will look like
+            the navbar in the header.
+          </p>
+
+          <div class="example">
+            <nav class="bar">
+              <a href="/" class="active">Home</a>
+              <a href="/cheez">Cheez</a>
+              <a href="/blog">Blog</a>
+            </nav>
+          </div>
+
+          <pre><code lang="html">&lt;body>
+  &lt;header>
+    &lt;a href="/" class="logo">Cheezburgerz!&lt;/a>
+
+    &lt;nav>
+      &lt;a href="/">Home&lt;/a>
+      &lt;a href="/cheez">Cheez&lt;/a>
+      &lt;a href="/blog">Blog&lt;/a>
+    &lt;/nav>
+  &lt;/header>
+
+  .... the rest of the page markup
+&lt;/body></code></pre>
+
+          <p>
+            If you put the <tt>NAV</tt> component structure in the
+            <tt>ASIDE</tt> element in on of the sidebars, or add
+            the <tt>.list</tt> class to it, you'll end up with
+            a vertical navigation list.
+          </p>
+
+          <div class="example">
+            <nav class="list">
+              <a href="/" class="active">Home</a>
+              <a href="/cheez">Cheez</a>
+              <a href="/blog">Blog</a>
+            </nav>
+          </div>
+
+          <pre><code lang="html">&lt;nav class="list">
+  &lt;a href="/" class="active">Home&lt;/a>
+  &lt;a href="/cheez">Cheez&lt;/a>
+  &lt;a href="/blog">Blog&lt;/a>
+&lt;/nav></code></pre>
+
         </article>
         <aside>
           <nav>
             <a href="#">Beginning</a>
             <a href="#buttons">Buttons</a>
             <a href="#groups">Element Groups</a>
+            <a href="#navigation">Navigation</a>
           </nav>
         </aside>
       </div>

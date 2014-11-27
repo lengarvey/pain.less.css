@@ -18,11 +18,6 @@
 @font-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
 @line-height:         @font-size * 1.64;
 
-// layouts
-@layout-width:    970px;   // fixed layout width
-@layout-paddings: 2em 2em; // header/main/footer elements paddings
-@sidebar-width:   270px;
-
 // colors
 @color-background: #fff;
 @color-foreground: #000; // fonts and stuff
@@ -31,15 +26,21 @@
 @color-warning:    #f4d03f;
 @color-danger:     #ed4d50;
 @color-info:       #af7ac5;
-@color-shading:    8%;
-@color-header:     lighten(@color-primary, 40%);
+@color-header:     lighten(@color-primary, 20%);
 @color-footer:     lighten(@color-info,    30%);
 
 
+// layouts
+@layout-width:    970px;   // fixed layout width
+@layout-paddings: 2em 2em; // header/main/footer elements paddings
+@sidebar-width:   270px;
+
+
 // components
-@border-radius: 4px; // standard border-radius
+@border-radius: 3px; // standard border-radius
 @border-width:  1px;
 @border-color:  lighten(@font-color, 85%);
+@hover-shading: 8%;
 
 // forms
 @input-min-width:  24em;

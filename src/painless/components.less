@@ -27,7 +27,7 @@
     border-color: @color-primary;
 
     &:hover {
-      background: darken(@color-primary, @color-shading);
+      background: darken(@color-primary, @hover-shading);
     }
   }
 
@@ -36,7 +36,7 @@
     border-color: @color-success;
 
     &:hover {
-      background: darken(@color-success, @color-shading);
+      background: darken(@color-success, @hover-shading);
     }
   }
 
@@ -45,7 +45,7 @@
     border-color: @color-warning;
 
     &:hover {
-      background: darken(@color-warning, @color-shading);
+      background: darken(@color-warning, @hover-shading);
     }
   }
 
@@ -54,7 +54,7 @@
     border-color: @color-danger;
 
     &:hover {
-      background: darken(@color-danger, @color-shading);
+      background: darken(@color-danger, @hover-shading);
     }
   }
 
@@ -63,7 +63,7 @@
     border-color: @color-info;
 
     &:hover {
-      background: darken(@color-info, @color-shading);
+      background: darken(@color-info, @hover-shading);
     }
   }
 }
@@ -142,4 +142,58 @@ pre {
       }
     }
   }
+}
+
+.nav-bar {
+  a {
+    display: inline-block;
+    border-radius: @border-radius;
+    vertical-align: middle;
+
+    &.active {
+      color: @color-primary;
+    }
+  }
+}
+
+.nav-list {
+  a {
+    display: block;
+  }
+}
+
+nav {
+  &.bar {
+    .nav-bar;
+  }
+
+  &.list {
+    .nav-list;
+  }
+
+  a {
+    padding: .2em .5em;
+    border-radius: @border-radius;
+
+    &.active, &:active, &:hover {
+      background: lighten(@color-primary, 40%);
+      color: @color-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+body > header nav {
+  .pull-right;
+  .nav-bar;
+
+  a {
+    &:hover {
+      color: @color-primary;
+    }
+  }
+}
+
+body > main > .paddings > aside nav {
+  .nav-list;
 }

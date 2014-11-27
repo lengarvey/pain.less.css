@@ -13,7 +13,6 @@ html, body {
 
     .paddings {
       padding: @layout-paddings;
-      display: flex;
     }
   }
 
@@ -23,6 +22,10 @@ html, body {
 
   > main {
     flex: 1;
+
+    .paddings {
+      display: flex;
+    }
 
     > article, > .paddings > article {
       flex: 1;

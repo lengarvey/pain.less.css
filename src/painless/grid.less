@@ -1,0 +1,36 @@
+/**
+ * A simple flex-box based grid system
+ */
+
+.grid {
+  display: flex;
+
+  > * {
+    flex: 1;
+    box-sizing: border-box;
+
+    &.half {
+      flex: 0 0 50%;
+    }
+
+    &.third {
+      flex: 0 0 33.3333%;
+    }
+
+    &.quoter {
+      flex: 0 0 25%;
+    }
+
+    &.fifth {
+      flex: 0 0 20%;
+    }
+  }
+
+  &:not(.tight) {
+    margin-left: -1em;
+
+    > * {
+      padding-left: 1em;
+    }
+  }
+}

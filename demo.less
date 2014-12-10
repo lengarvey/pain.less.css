@@ -41,4 +41,18 @@ body {
       margin: 0;
     }
   }
+
+  // grid examples
+  > .grid {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    > div > div {
+      background: darken(@color-background, 10%);
+      border-radius: @border-radius;
+      text-align: center;
+      padding: .5em 0;
+    }
+  }
 }

@@ -107,6 +107,108 @@
             Another way, you can change the flex-box order for the <tt>ASIDE</tt>
             tag
           </p>
+          <p>
+            You also can have sidebars on the both sides.
+          </p>
+
+          <a id="grids"></a>
+          <h2>Grid System</h2>
+          <p>
+            The grid system in <tt>pain.less.css</tt> is dead simple, add the
+            <tt>.grid</tt> class to an element and that's it. All the child
+            elements will be considered grid cells, and you can change their
+            size by addin the <tt>.half</tt>, <tt>.third</tt> or <tt>.quoter</tt>
+            css classes to them.
+          </p>
+          <div class="example">
+            <div class="grid">
+              <div class="half"><div>1/2</div></div>
+              <div class="half"><div>1/2</div></div>
+            </div>
+            <div class="grid">
+              <div class="third"><div>1/3</div></div>
+              <div class="third"><div>1/3</div></div>
+              <div class="third"><div>1/3</div></div>
+            </div>
+            <div class="grid">
+              <div class="quoter"><div>1/4</div></div>
+              <div class="quoter"><div>1/4</div></div>
+              <div class="quoter"><div>1/4</div></div>
+              <div class="quoter"><div>1/4</div></div>
+            </div>
+          </div>
+
+          <pre><code lang="html">&lt;div class="grid">
+  &lt;div class="half">1/2&lt;/div>
+  &lt;div class="half">1/2&lt;/div>
+&lt;/div>
+&lt;div class="grid">
+  &lt;div class="third">1/3&lt;/div>
+  &lt;div class="third">1/3&lt;/div>
+  &lt;div class="third">1/3&lt;/div>
+&lt;/div>
+&lt;div class="grid">
+  &lt;div class="quoter">1/4&lt;/div>
+  &lt;div class="quoter">1/4&lt;/div>
+  &lt;div class="quoter">1/4&lt;/div>
+  &lt;div class="quoter">1/4&lt;/div>
+&lt;/div></code></pre>
+
+          <p>
+            Our grid system is based on the <tt>flex-box</tt> settings,
+            so if you amend the size classes on any of the elements,
+            they will try to take all the rest of the space.
+          </p>
+
+          <div class="example">
+            <div class="grid">
+              <div class="quoter"><div>1/4</div></div>
+              <div><div>Auto</div></div>
+            </div>
+            <div class="grid">
+              <div><div>Auto</div></div>
+              <div class="quoter"><div>1/4</div></div>
+            </div>
+            <div class="grid">
+              <div class="quoter"><div>1/4</div></div>
+              <div><div>Auto</div></div>
+              <div class="quoter"><div>1/4</div></div>
+            </div>
+          </div>
+
+          <pre><code lang="html">&lt;div class="grid">
+  &lt;div class="quoter">1/4&lt;/div>
+  &lt;div>Auto&lt;/div>
+&lt;/div>
+&lt;div class="grid">
+  &lt;div>Auto&lt;/div>
+  &lt;div class="quoter">1/4&lt;/div>
+&lt;/div>
+&lt;div class="grid">
+  &lt;div class="quoter">1/4&lt;/div>
+  &lt;div>Auto&lt;/div>
+  &lt;div class="quoter">1/4&lt;/div>
+&lt;/div></code></pre>
+
+          <p>
+            You cant create tight grids, the ones that don't have
+            any paddings between the elements, simply by adding the
+            <tt>.tight</tt> class to the main grid element.
+          </p>
+
+          <div class="example">
+            <div class="grid tight">
+              <div class="third"><div>1/3</div></div>
+              <div class="third"><div>1/3</div></div>
+              <div class="third"><div>1/3</div></div>
+            </div>
+          </div>
+
+          <pre><code lang="html">&lt;div class="grid tight">
+  &lt;div class="third">1/3&lt;/div>
+  &lt;div class="third">1/3&lt;/div>
+  &lt;div class="third">1/3&lt;/div>
+&lt;/div></code></pre>
         </article>
         <aside>
           <nav>

@@ -9,6 +9,14 @@ module.exports = function(grunt) {
         files: {
           "./demo.css": "./demo.less"
         }
+      },
+      dist: {
+        options: {
+          paths: ["./", "./src"]
+        },
+        files: {
+          "./dist/pain.less.css" : "./src/dist.less"
+        }
       }
     },
     lesslint: {
@@ -26,6 +34,16 @@ module.exports = function(grunt) {
       },
       stuff: {
         src: "./demo.css"
+      },
+      dist: {
+        src: "./dist/pain.less.css"
+      }
+    },
+    cssmin: {
+      dist: {
+        files: {
+          './dist/pain.less.min.css' : ['./dist/pain.less.css']
+        }
       }
     },
     watch: {
@@ -57,6 +75,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-lesslint');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+  grunt.registerTask('dist', ['less:dist', 'autoprefixer:dist', 'cssmin:dist']);
   grunt.registerTask('default', ['connect', 'watch']);
+
+
 };
